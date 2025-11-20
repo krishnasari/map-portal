@@ -1,0 +1,20 @@
+<div class="card table-responsive">
+  <h3>Recent Analysis</h3>
+
+  <table>
+    <tr>
+      <th>File</th>
+      <th>Type</th>
+      <th>Result</th>
+    </tr>
+
+    <tr *ngFor="let item of recentItems">
+      <td>{{ item.filename }}</td>
+      <td>{{ item.type }}</td>
+      <td [class.clean]="item.result === 'Clean'"
+          [class.infected]="item.result === 'Infected'">
+        {{ item.result }}
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,55 @@
+.card {
+  padding: 16px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 16px;
+}
+
+/* Responsive table */
+.table-responsive {
+  overflow-x: auto; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  table-layout: fixed; /* keeps columns aligned */
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  overflow: visible;        
+  text-overflow: clip;      
+  white-space: normal;      /* allow wrapping if needed */
+}
+
+/* Header background color */
+th {
+  background-color: #f1f5f9; 
+  font-weight: bold;
+}
+
+/* Column width adjustments */
+th:nth-child(1),
+td:nth-child(1) { width: 20%; }
+th:nth-child(2),
+td:nth-child(2) { width: 40%; }
+th:nth-child(3),
+td:nth-child(3) { width: 20%; }
+th:nth-child(4),
+td:nth-child(4) { width: 20%; }
+
+/* Status colors */
+.clean {
+  color: green;
+  font-weight: bold;
+}
+
+.infected {
+  color: red;
+  font-weight: bold;
+}

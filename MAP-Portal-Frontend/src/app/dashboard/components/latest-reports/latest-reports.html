@@ -1,0 +1,20 @@
+<div class="card">
+  <h3>Latest Reports</h3>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>File</th>
+      <th>Date</th>
+      <th>Result</th>
+    </tr>
+    <tr *ngFor="let report of reports">
+      <td>{{ report.id }}</td>
+      <td>{{ report.file }}</td>
+      <td>{{ report.date }}</td>
+      <td [class.clean]="report.result === 'Clean'" 
+          [class.infected]="report.result === 'Infected'">
+        {{ report.result }}
+      </td>
+    </tr>
+  </table>
+</div>

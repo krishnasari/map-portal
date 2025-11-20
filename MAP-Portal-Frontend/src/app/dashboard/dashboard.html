@@ -1,0 +1,22 @@
+<div class="dashboard-container">
+
+  <!-- Header -->
+  <header class="header">
+    <h2>MAP Portal Dashboard</h2>
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <a routerLink="/dashboard/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/dashboard/upload" routerLinkActive="active">Upload</a>
+    <a routerLink="/dashboard/reports" routerLinkActive="active">Reports</a>
+    <a routerLink="/dashboard/settings" routerLinkActive="active">Settings</a>
+  </nav>
+
+  <!-- Child page content renders here -->
+  <router-outlet></router-outlet>
+
+
+  
+</div>

@@ -1,0 +1,16 @@
+<div class="upload-container">
+  <h2>Upload Malware Sample</h2>
+  <p>Upload file functionality will be added soon.</p>
+
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="onUpload()" [disabled]="isUploading">Upload</button>
+
+  <div *ngIf="isUploading" class="progress-container">
+    <div class="progress-bar" [style.width]="progress + '%'"></div>
+    <p>{{ progress }}% uploading...</p>
+  </div>
+
+  <div *ngIf="message" class="message">
+    <p>{{ message }}</p>
+  </div>
+</div>
